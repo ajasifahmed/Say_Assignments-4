@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark sheet</title>
+    <style>
+table {
+  border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th><label>Subject</label></th>
+            <th><label>Total marks</label></th>
+            <th><label>Obtained marks</label></th>
+            <th><label>Percentage</label></th>
+        </tr>
+        <tr>
+            <td><label>English</label></td>
+            <td>100</td>
+            <td id="id1"></td>
+            <td id="id2"></td>
+        </tr>
+        <tr>
+            <td><label>Maths</label></td>
+            <td>100</td>
+            <td id="id3"></td>
+            <td id="id4"></td>
+        </tr>
+        <tr>
+            <td><label>Urdu</label></td>
+            <td>100</td>
+            <td id="id5"></td>
+            <td id="id6"></td>
+        </tr>
+        <tr>
+            <td><label>TOTAL</label></td>
+            <td>300</td>
+            <td id="id7"></td>
+            <td id="id8"></td>
+        </tr>
+        
+    </table>
+    
+</body>
+<script>
+    var english=+prompt('english marks');
+    var maths=+prompt('maths marks');
+    var urdu=+prompt('urdu marks');
+
+    var eng=document.getElementById("id1");
+    eng.innerHTML=english
+    var eng_per=document.getElementById("id2");
+    eng_per.innerHTML=english+"%"
+
+    var math=document.getElementById("id3");
+    math.innerHTML=maths
+    var math_per=document.getElementById("id4");
+    math_per.innerHTML=maths+"%"
+
+    var urd=document.getElementById("id5");
+    urd.innerHTML=urdu
+    var urdu_per=document.getElementById("id6");
+    urdu_per.innerHTML=urdu+"%"
+
+totalmarks=english+maths+urdu;
+
+    id7=document.getElementById("id7");
+    id7.innerHTML=totalmarks;
+
+    var tot_per=document.getElementById("id8");
+    tot_per.innerHTML=(totalmarks/300)*100;
+
+
+
+</script>
+</html>
